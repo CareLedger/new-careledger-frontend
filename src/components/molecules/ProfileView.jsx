@@ -56,7 +56,7 @@ const ProfileView = () => {
                         <div className="w-[12px] h-[12px] rounded-[50px] bg-white"></div>
                       </div>
                       <p className="ml-[20px] text-white text-[15px] ">
-                        02 Jun 2018 - Dr. Lesile
+                        19th May 2023 - Dr. Lesile
                       </p>
                     </div>
 
@@ -66,8 +66,7 @@ const ProfileView = () => {
                       </p>
 
                       <p className="text-[#ffffff90] text-[14px]">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.
+                        Sugery conducted sucessfully.
                       </p>
                     </div>
                   </div>
@@ -78,18 +77,17 @@ const ProfileView = () => {
                         <div className="w-[12px] h-[12px] rounded-[50px] bg-white"></div>
                       </div>
                       <p className="ml-[20px] text-white text-[15px] ">
-                        02 Jun 2018 - Dr. Micheal
+                      19th May 2023 - Dr. Micheal
                       </p>
                     </div>
 
                     <div className="ml-[40px]">
                       <p className="text-[18px] font-semibold text-white my-[8px] ">
-                        Spinal Osteomyelitis Surgery
+                        Typhoid and Malaria Found
                       </p>
 
                       <p className="text-[#ffffff90] text-[14px]">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.
+                        Malaria significant and Typhoid 1/160 1/80 1/80 1/180
                       </p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 export const user = {
     id:"",
-    name:"Emily Timothy",
-    email:"emilychealy4@gmail.com",
+    name:"Amaka Peter",
+    email:"amakapeter4@gmail.com",
     address:"5 Sapa way, Zone 5 Shege Estate",
     phonenumber:"08109234585",
     country:"Nigeria",

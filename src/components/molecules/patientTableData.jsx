@@ -46,7 +46,7 @@ const tableData = [
     age: 45,
     address: "36 brass Aba",
     number: "07046732890",
-    date: "19th March 2023",
+    date: "19th May 2023",
   },
 
   {
@@ -57,7 +57,7 @@ const tableData = [
     age: 45,
     address: "Serti, Taraba",
     number: "09067895432",
-    date: "19th April 2023",
+    date: "19th May 2023",
   },
 ];
 
