@@ -21,7 +21,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-[color:var(--text-color)] text-[15px] w-full md:w-[80%] mt-[20px] leading-[25px]">
-            Careledger is a blockchain medical online platform designed to help hospitals
+            Careledger is a blockchain medical online platform designed to help Users and medical Personnel
             manage patient's information efficiently.{" "}
           </p>
           <Link href="/signup">

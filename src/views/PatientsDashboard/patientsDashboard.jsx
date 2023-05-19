@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import PatientTableData from "../../components/molecules/patientTableData";
 import Navbar from "@/components/molecules/Navbar";
 import { FaUser } from "react-icons/fa";
+import SideSlide from "@/components/molecules/userSlideSide";
 
 const PatientsDashboard = () => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  const handleSetOpen=()=>{
+    setIsOpen(!isOpen)
+  }
+  
   return (
     <div className="bg">
       <Navbar />
+
+      <SideSlide open={isOpen} setOpen={handleSetOpen} />
       <div className="px-5">
         <div className=" shadow rounded-lg px-4 mt-[40px] py-[20px] w-full sm:max-w-[300px]  flex items-center card-shadow">
           <div className="w-full flex flex-col gap-y-2">
@@ -49,7 +58,7 @@ const PatientsDashboard = () => {
         <h1 className="text-[25px] text-white mt-[5px]">Patients List</h1>
         <p className="text-[15px] text-gray-400">Get all patients lists</p>
 
-        <PatientTableData />
+        <PatientTableData handleSetOpen={handleSetOpen} />
       </div>
     </div>
   );

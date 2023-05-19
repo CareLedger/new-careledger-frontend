@@ -46,8 +46,7 @@ function Aboutus() {
             what We Offer
           </h1>
           <p className="text-[14px] text-white w-full md:w-[400px]  text-center font-[300]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Lorem ipsum .
+            
           </p>
 
           <div className="flex w-full md:flex-row flex-col items-center gap-x-[100px] mt-[50px]">

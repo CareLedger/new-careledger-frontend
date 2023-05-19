@@ -10,59 +10,58 @@ const tableData = [
     id: 1,
     media: girl,
     patientId: "P0001",
-    name: "John Doe",
+    name: "Amaka Peter",
     age: 32,
     address: "123 Main Street",
-    number: "+1-555-555-5555",
-    status: "Active",
+    number: "09075545678",
+    date: "19th May 2023",
   },
   {
     id: 2,
     media: girl1,
     patientId: "P0002",
-    name: "Jane Smith",
+    name: "Jane Frank",
     age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    date: "10th May 2023",
+    address: "456 yaba street lagos",
+    number: "08034568755",
     result: "Lab Results",
-    status: "Inactive",
+    date: "19th May 2023",
   },
   {
     id: 2,
     media: man,
-    patientId: "P0002",
-    name: "Jane Smith",
+    patientId: "P0003",
+    name: "Tosin Tobi",
     age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    status: "Inactive",
-  },
-
-  {
-    id: 2,
-    media: man,
-    patientId: "P0002",
-    name: "Jane Smith",
-    age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    status: "Inactive",
+    address: "45 Orun rd, Uyo",
+    number: "09087654234",
+    date: "19th May 2023",
   },
 
   {
     id: 2,
     media: man,
-    patientId: "P0002",
-    name: "Jane Smith",
+    patientId: "P0004",
+    name: "Stephanie",
     age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    status: "Inactive",
+    address: "36 brass Aba",
+    number: "07046732890",
+    date: "19th March 2023",
+  },
+
+  {
+    id: 2,
+    media: man,
+    patientId: "P0005",
+    name: "Usman Aminu",
+    age: 45,
+    address: "Serti, Taraba",
+    number: "09067895432",
+    date: "19th April 2023",
   },
 ];
 
-function PatientTableData() {
+function PatientTableData({ handleSetOpen }) {
   const navigate = useRouter();
 
   return (
@@ -92,10 +91,10 @@ function PatientTableData() {
               Date created
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-[#00b4b6] uppercase tracking-wider">
-              Lab Result
+              View Profile
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-[#00b4b6] uppercase tracking-wider">
-              Status
+              Update Record
             </th>
           </tr>
         </thead>
@@ -108,7 +107,6 @@ function PatientTableData() {
                 className={`${
                   ind % 2 === 0 ? "bg-gray-900" : "bg-gray-800"
                 } cursor-pointer`}
-                onClick={() => navigate.push("/profile")}
               >
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
@@ -139,13 +137,25 @@ function PatientTableData() {
                   <div className="text-sm text-gray-400">{item.number}</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.status}</div>
+                  <div className="text-sm text-gray-400">{item.date}</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.status}</div>
+                  <button
+                    className="bg-transparent border border-[#00b4b6] text-white py-1 px-3 rounded-[7px] "
+                    onClick={() => navigate.push("/profile")}
+                  >
+                    View
+                  </button>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.status}</div>
+                  <div className="text-sm text-gray-400">
+                    <button
+                      className="bg-[#00b4b6] text-white py-1 px-3 rounded-[7px] "
+                      onClick={handleSetOpen}
+                    >
+                      Update
+                    </button>
+                  </div>
                 </td>
               </tr>
             );

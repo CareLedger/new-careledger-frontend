@@ -13,7 +13,7 @@ function Features() {
         <div className=" w-full max-w-[85%] m-auto flex flex-col items-center justify-center py-[30px] sm:py-[60px] ">
           <h1 className="font-bold text-[23px] sm:text-[30px] text-white">Our Features</h1>
           <p className="text-[14px] text-center text-white font-[300]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Our features gives you the best flow on how you can manage your health record and secuerly give you the choice to grant access to any trusted health personnel you want.
           </p>
 
           <div className="flex flex-wrap  justify-between text-white gap-x-[3%] py-7 mt-[30px] sm:mt-[100px]">
