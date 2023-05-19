@@ -13,7 +13,7 @@ const offerInfo = [
     icon: digitalStorage,
     title: "Digital Storage",
     description:
-      "A digital storage where doctors and hospitals, gets to store each patient details.",
+      "A digital storage where user get's to see everything about his health history and can give access to whom ever he choose to.",
   },
   {
     icon: recordTracker,
@@ -25,13 +25,13 @@ const offerInfo = [
     icon: id,
     title: "Unique ID",
     description:
-      "A unique identification number issued to every patient on the digital storage dashboard to use to acess and i dentifiy each patient",
+      "A unique identification number issued to every user on the digital storage to use to access their file in any hospital they go to prior to their current location.",
   },
   {
     icon: securePrivacy,
     title: "Privacy & Security",
     description:
-      "Patient and hospital information are stored in the blochchain were its being secured and private to those who are authorisede.",
+      "User and Medical Personell information are stored in the blochchain were its being secured and private to those who are authorisede.",
   },
 ];
 

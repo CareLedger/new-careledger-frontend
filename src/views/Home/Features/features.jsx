@@ -21,9 +21,7 @@ function Features() {
               <Image src={uploadImage} className="w-[20%]" alt="" srcset="" />
               <h1 className="text-[18px] my-[8px] font-bold">Upload/Update</h1>
               <p className="text-[14px] font-[300] text-center text-[#fff]">
-                Lorem ipsum dolor sit amet consectetur. Leo integer ut vel ut
-                rhoncus purus. Vel erat et vitae enim nulla in. Quis non at
-                donec pellentesque malesuada nunc
+                This is the part were when the user grant a health personel access to his medical record, the medical pesonel can be able to read and update the user record.
               </p>
             </div>
 
@@ -33,9 +31,7 @@ function Features() {
                 Controlled Access
               </h1>
               <p className="text-[14px] font-[300] text-center text-[#fff]">
-                Lorem ipsum dolor sit amet consectetur. Leo integer ut vel ut
-                rhoncus purus. Vel erat et vitae enim nulla in. Quis non at
-                donec pellentesque malesuada nunc
+                All information stored are private to the user and the medical personel if granted access to read and update record. And no form of temparing with the previous result.
               </p>
             </div>
 
@@ -43,9 +39,7 @@ function Features() {
               <Image src={wallet} className="w-[20%]" alt="" srcset="" />
               <h1 className="text-[18px] my-[8px] font-bold">Celo Wallet</h1>
               <p className="text-[14px] font-[300] text-center text-[#fff]">
-                Lorem ipsum dolor sit amet consectetur. Leo integer ut vel ut
-                rhoncus purus. Vel erat et vitae enim nulla in. Quis non at
-                donec pellentesque malesuada nunc
+                This allows users to securely manage their Celo assets, including CELO, cUSD, and other Celo-based assets, in a decentralized and non-custodial manner. Celo Safe is built on top of the Celo blockchain and leverages the security of the blockchain to ensure the safety.
               </p>
             </div>
           </div>

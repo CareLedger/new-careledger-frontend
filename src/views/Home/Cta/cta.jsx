@@ -13,11 +13,11 @@ const Cta = () => {
                 Own your record
               </p>
               <h3 className="sm:text-[30px] text-[23px] leading-[28px] sm:leading-[35px] font-bold my-[15px] text-white">
-                Want to have the best way of securing your patients details?
+                Want to have the best way of keeping track of your Health Record?
               </h3>
 
               <p className="text-white text-[15px]">
-                Get the best working experience that you never feel before
+                Get to decide who can have access to your health record at anytime.
               </p>
 
               <button className="border mt-[30px] border-[#00b4b6] bg-[#00b4b6] w-full text-[color:var(--text-color)] px-3 py-[11px] rounded-[7px] hover:bg-[#00b4b6] transition-all">
