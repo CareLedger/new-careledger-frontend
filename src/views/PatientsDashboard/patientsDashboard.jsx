@@ -17,7 +17,7 @@ const PatientsDashboard = () => {
                 </div>
                 <div>
                   <h2 className=" text-white text-sm font-medium mb-2">
-                    Overall Visitors
+                    Overall Accessed patients
                   </h2>
                 </div>
               </div>

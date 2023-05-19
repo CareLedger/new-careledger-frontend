@@ -2,8 +2,12 @@ import { ConnectButton, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const CustomConnectBtn = () => {
+const CustomConnectBtn = ({ type, text }) => {
   const router = useRouter();
+
+  const handleClick = (page) => {
+    router.push(page);
+  };
 
   return (
     <ConnectButton.Custom>
@@ -17,9 +21,12 @@ const CustomConnectBtn = () => {
         mounted,
       }) => {
         const ready = mounted && authenticationStatus !== "loading";
-        console.log("mmmmmmmmmmm", mounted);
         // redirect when connected
-        account !== undefined ? router.push("/profile") : router.push("/");
+        account !== undefined && type === "doc"
+          ? router.push("/doctors-patients")
+          : account !== undefined && type === "pat"
+          ? router.push("/profile")
+          : null;
         const connected =
           ready &&
           account &&
@@ -44,7 +51,7 @@ const CustomConnectBtn = () => {
                     type="button"
                     className="border  hover:bg-[#00b4b6] border-[#00b4b6]  [ transition-colors duration-500 ]  text-[color:var(--text-color)] px-4 py-[7px] rounded-[7px]"
                   >
-                    Connect Wallet
+                    {text || "Connect Wallet"}
                   </button>
                 );
               }

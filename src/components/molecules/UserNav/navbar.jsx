@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-// import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { Menu, Transition } from "@headlessui/react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import CustomConnectBtn from "../CustomConnectBtn";
+import { classNames } from "../../../helpers/classNames";
 import Logo from "../../../assets/White2.png";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [userType, setUserType] = useState("");
+
+  const updateUserType = (type) => {
+    setUserType(type);
+  };
+
+  console.log(userType);
 
   const handleOpen = () => {
     setOpenMenu(!openMenu);
@@ -43,13 +52,60 @@ function Navbar() {
               </li>
             </Link> */}
 
-            <CustomConnectBtn />
+            <div className="relative">
+              <CustomConnectBtn type={userType} />
 
-            <Link href="/signup">
-              <li className="bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent [ transition-colors duration-500 ]  text-[color:var(--text-color)] px-4 py-[7px] rounded-[7px]">
-                <button>Get started</button>
-              </li>
-            </Link>
+              {/* <CustomConnectBtn text="Connect Doc Wallet" /> */}
+
+              {!userType && (
+                <Menu as="div" className="absolute top-0 left-0 ml-3">
+                  <div>
+                    <Menu.Button className="flex rounded-full bg-transparent text-sm outline-none focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <span className="sr-only">Open user menu</span>
+                      <div className="h-9 w-[140px] outline-none " />
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <p
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                            onClick={() => updateUserType("pat")}
+                          >
+                            As a Patient
+                          </p>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <p
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                            onClick={() => updateUserType("doc")}
+                          >
+                            As a Doctor
+                          </p>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              )}
+            </div>
           </div>
 
           <HiMenuAlt3
